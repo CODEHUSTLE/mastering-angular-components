@@ -1,4 +1,5 @@
-import { Component, Input, HostBinding, EventEmitter, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, HostBinding, EventEmitter, ViewEncapsulation } from '@angular/core';
+import {Task} from '../../model';
 
 @Component({
   selector: 'mac-task',
@@ -7,12 +8,19 @@ import { Component, Input, HostBinding, EventEmitter, ViewEncapsulation } from '
 })
 export class TaskComponent {
 
-  @Input() task: any;
+  @Input() task: Task;
+  @Output() outUpdateTask = new EventEmitter<Task>();
 
   @HostBinding('class.done')
   get done() {
     return this.task && this.task.done;
   }
 
-  
+  updateTask(done: boolean) {
+    this.outUpdateTask.emit({
+      ...this.task,
+      done
+    });
+  }
+
 }

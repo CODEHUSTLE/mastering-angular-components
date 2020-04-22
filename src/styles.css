@@ -801,7 +801,20 @@ mac-enter-task {
 }
 
 mac-enter-task .button {
-  flex-grow: 0
+	flex-grow: 0;
+	color: hsla(219, 95%, 59%, 0.75);
+  letter-spacing: 1px;
+  line-height: 15px;
+  border: 2px solid hsla(219, 95%, 59%, 0.75);
+  border-radius: 40px;
+  background: transparent;
+  transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+  color: #FFF;
+  background: rgba(88, 179, 123, 0.75);
+  border: 2px solid rgba(88, 179, 123, 0.75);
 }
 
 mac-enter-task .title-input {
@@ -973,7 +986,8 @@ mac-toggle {
 }
 
 mac-toggle .toggle-button {
-  display: inline-block;
+	display: inline-block;
+	width: 100%;
   padding: 10px 20px;
   border: none;
   background-color: #404040;
