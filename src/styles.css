@@ -70,6 +70,10 @@ a:focus, button:focus, input:focus, select:focus {
   outline: none
 }
 
+.toolbar a {
+	padding-right: 10px;
+}
+
 button {
   cursor: pointer
 }
@@ -778,9 +782,9 @@ mac-task-list-container {
 }
 
 mac-task-list {
-  display: flex;
+  /* display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   width: 100%;
   padding: 50px;
 }
@@ -793,7 +797,7 @@ mac-enter-task {
   display: flex;
   align-items: center;
   flex: auto;
-  margin-left: 20px;
+  padding: 10px;
 }
 
 mac-enter-task .button {

@@ -8,8 +8,16 @@ import { Component, ViewEncapsulation } from '@angular/core';
 export class TaskListComponent {
 
   tasks = [
-    { id: 1, title: 'Task 1', done: false},
-    { id: 2, title: 'Task 2', done: true}
-  ]
+    { id: this.genID(), title: 'Task 1', done: false },
+    { id: this.genID(), title: 'Task 2', done: true }
+  ];
+
+  genID() {
+    return Math.floor(Math.random() * 10);
+  }
+
+  addTask(title: string) {
+    this.tasks.push({ id: this.genID(), title, done: false });
+  }
 
 }
